@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Employed Persons Travelling to Work by Public Transport, by State",
   "width": 500,
   "height": 300,
   "data": {
@@ -14,17 +15,21 @@
                 "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/map/transport_method/data/travel_to_work.csv"
             },
             "key": "State/Territory",
-            "fields": ["Total number of employed persons"]
+            "fields": ["Number of employed persons"]
         }
     }
   ],
   "mark": {
     "type": "geoshape",
-    "fill": "#eee",
     "stroke": "#757575",
     "strokeWidth": 0.5
 },
   "encoding": {
+    "color": {
+        "field": "Number of employed persons",
+        "type": "quantitative",
+        "scale": {"type": "log"}
+    },
     "tooltip": [
         {
             "field": "properties.STE_NAME16", 
@@ -32,7 +37,7 @@
             "title": "State/Territory"
         },
         {
-            "field": "Total number of employed persons",
+            "field": "Number of employed persons",
             "type": "quantitative",
             "title": "Employed persons"
         }
