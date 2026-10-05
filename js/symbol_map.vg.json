@@ -1,0 +1,80 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "title": "Public Transport Patronage by Australian Capital City, 2025",
+  "projection": {
+    "type": "equalEarth",
+    "center": [133, -27],
+    "scale": 700
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/map/transport_method/js/STE_2016_AUST.json",
+        "format": {"type": "topojson", "feature": "STE_2016_AUST"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e5e5e5",
+        "stroke": "white",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/symbol_map/patronage_in_each_city/data/patronage_all_cities_2025.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "opacity": 0.8,
+        "stroke": "#333333",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "size": {
+          "field": "Total patronage (million passenger trips)",
+          "type": "quantitative",
+          "title": "Total Patronage (million)",
+          "scale": {
+            "range": [50, 1200]
+          }
+        },
+        "color": {
+          "field": "Total patronage (million passenger trips)",
+          "type": "quantitative",
+          "scale": {"scheme": "reds"}
+        },
+        "tooltip": [
+          {"field": "Capital city", "type": "nominal", "title": "City"},
+          {"field": "Total patronage (million passenger trips)", "type": "quantitative", "title": "Total (M)", "format": ".2f"},
+          {"field": "Heavy rail (million passenger trips)", "type": "quantitative", "title": "Heavy Rail (M)", "format": ".2f"},
+          {"field": "Light rail (million passenger trips)", "type": "quantitative", "title": "Light Rail (M)", "format": ".2f"},
+          {"field": "UPT Bus (million passenger trips)", "type": "quantitative", "title": "Bus (M)", "format": ".2f"},
+          {"field": "Ferry (million passenger trips)", "type": "quantitative", "title": "Ferry (M)", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/symbol_map/patronage_in_each_city/data/patronage_all_cities_2025.csv"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 12,
+        "dy": -2,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#222222"
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "Capital city", "type": "nominal"}
+      }
+    }
+  ]
+}
