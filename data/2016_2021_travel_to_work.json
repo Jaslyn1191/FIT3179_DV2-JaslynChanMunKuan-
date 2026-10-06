@@ -1,0 +1,18 @@
+[
+    {"state": "New South Wales","year":2016,"number of employed persons":397173},
+    {"state": "Victoria","year":2016,"number of employed persons":238249},
+    {"state": "Queensland","year":2016,"number of employed persons":110920},
+    {"state": "South Australia","year":2016,"number of employed persons":41548},
+    {"state": "Western Australia","year":2016,"number of employed persons":71026},
+    {"state": "Tasmania","year":2016,"number of employed persons":5362},
+    {"state": "Northern Territory","year":2016,"number of employed persons":4966},
+    {"state": "Australian Capital Territory","year":2016,"number of employed persons":12462},
+    {"state": "New South Wales","year":2021,"number of employed persons":147493},
+    {"state": "Victoria","year":2021,"number of employed persons":138871},
+    {"state": "Queensland","year":2021,"number of employed persons":100393},
+    {"state": "South Australia","year":2021,"number of employed persons":44458},
+    {"state": "Western Australia","year":2021,"number of employed persons":96782},
+    {"state": "Tasmania","year":2021,"number of employed persons":8052},
+    {"state": "Northern Territory","year":2021,"number of employed persons":2918},
+    {"state": "Australian Capital Territory","year":2021,"number of employed persons":15614}
+]
