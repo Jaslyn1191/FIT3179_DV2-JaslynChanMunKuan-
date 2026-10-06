@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 300,
+    "title": "Change in Public Transport Use by State/Territory, 2016–2021",
+    "data": {
+        "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/slope_graph/data/2016_2021_travel_to_work.json"
+    },
+    "mark": "line",
+    "encoding": {
+        "x": {
+            "field": "year",
+            "type": "ordinal",
+            "scale": {"padding": 0.5},
+            "title": "Year"
+        }, 
+        "y": {
+            "field": "number of employed persons",
+            "type": "quantitative",
+            "title": "Number of employed persons"
+        },
+        "color": {"field": "state", "type": "nominal", "title": "State/Territory"}
+    }
+}
