@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "20-Year Shift in Inter-Capital Non-Air Passenger Travel",
+    "subtitle": "Comparing passenger movements ('000) between FY 2002-03 and FY 2023-24",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/connected_dotplot/data/intercapacity.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.year == '2002-03' || datum.year == '2023-24'"
+    },
+    {
+      "calculate": "toNumber(datum.passenger_movements_thousands)",
+      "as": "passengers_num"
+    }
+  ],
+  "width": 600,
+  "height": 250,
+  "encoding": {
+    "y": {
+      "field": "route",
+      "type": "nominal",
+      "title": "City Pair Route",
+      "sort": {
+        "field": "passengers_num",
+        "op": "max",
+        "order": "descending"
+      }
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "pivot": "year",
+          "value": "passengers_num",
+          "groupby": ["route"]
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#888888",
+        "size": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "2002-03",
+          "type": "quantitative",
+          "title": "Number of Passenger Movements (Thousands)"
+        },
+        "x2": {
+          "field": "2023-24"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 120
+      },
+      "encoding": {
+        "x": {
+          "field": "passengers_num",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "year",
+          "type": "nominal",
+          "title": "Financial Year",
+          "scale": {
+            "domain": ["2002-03", "2023-24"],
+            "range": ["#2b5c8f", "#d95f02"]
+          }
+        },
+        "tooltip": [
+          {"field": "route", "type": "nominal", "title": "Route"},
+          {"field": "origin", "type": "nominal", "title": "Origin"},
+          {"field": "destination", "type": "nominal", "title": "Destination"},
+          {"field": "year", "type": "nominal", "title": "Year"},
+          {
+            "field": "passengers_num",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Passengers ('000)"
+          }
+        ]
+      }
+    }
+  ]
+}
