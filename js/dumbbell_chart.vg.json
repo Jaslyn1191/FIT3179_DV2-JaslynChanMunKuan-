@@ -1,0 +1,88 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Average Operational Performance by Public Transport Mode",
+    "subtitle": "Comparing % Services Delivered vs % Services On-Time",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/dumbbell_chart/data/transport_mode_performance.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {"op": "mean", "field": "pct_delivered", "as": "avg_delivered"},
+        {"op": "mean", "field": "pct_ontime", "as": "avg_ontime"}
+      ],
+      "groupby": ["mode"]
+    }
+  ],
+  "width": 600,
+  "height": 200,
+  "encoding": {
+    "y": {
+      "field": "mode",
+      "type": "nominal",
+      "title": "Transport Mode"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#888888",
+        "size": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "avg_ontime",
+          "type": "quantitative",
+          "scale": {
+            "domain": [60, 100]
+          },
+          "title": "Average Performance (%)"
+        },
+        "x2": {
+          "field": "avg_delivered"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "fold": ["avg_delivered", "avg_ontime"],
+          "as": ["metric_type", "value"]
+        },
+        {
+          "calculate": "datum.metric_type == 'avg_delivered' ? 'Services Delivered' : 'Services On-Time'",
+          "as": ["metric_label"]
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 150
+      },
+      "encoding": {
+        "x": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "metric_label",
+          "type": "nominal",
+          "title": "Metric",
+          "scale": {
+            "domain": ["Services Delivered", "Services On-Time"],
+            "range": ["#2b5c8f", "#d95f02"]
+          }
+        },
+        "tooltip": [
+          {"field": "mode", "type": "nominal", "title": "Transport Mode"},
+          {"field": "metric_label", "type": "nominal", "title": "Metric"},
+          {"field": "value", "type": "quantitative", "format": ".1f", "title": "Average (%)"}
+        ]
+      }
+    }
+  ]
+}
