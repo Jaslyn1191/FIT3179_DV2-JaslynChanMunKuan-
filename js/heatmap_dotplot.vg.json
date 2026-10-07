@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/marginal_hist/data/syd_bus_performance.csv"
+  },
+  "spacing": 15,
+  "bounds": "flush",
+  "vconcat": [
+    {
+      "title": "Sydney Metropolian Bus Service Average Monthly On-Time Performance (%)",
+      "mark": "circle",
+      "height": 80,
+      "width": 600,
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "ordinal",
+          "axis": null,
+          "title": null
+        },
+        "y": {
+          "field": "on-time performance percentage",
+          "type": "quantitative",
+          "aggregate": "mean",
+          "scale": {
+            "domain": [80, 100]
+          },
+          "title": "Avg On-Time %"
+        },
+        "tooltip": [
+          {"field": "month", "type": "ordinal", "title": "Month"},
+          {
+            "field": "on-time performance percentage",
+            "type": "quantitative",
+            "aggregate": "mean",
+            "format": ".2f",
+            "title": "Avg On-Time %"
+          }
+        ]
+      }
+    },
+    {
+      "mark": "rect",
+      "width": 600,
+      "height": 250,
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "ordinal",
+          "title": "Month",
+          "axis": {
+            "labelAngle": -45
+          }
+        },
+        "y": {
+          "field": "operator name",
+          "type": "nominal",
+          "title": "Operator Name"
+        },
+        "color": {
+          "field": "on-time performance percentage",
+          "type": "quantitative",
+          "title": "On-Time %",
+          "scale": {
+            "scheme": "viridis",
+            "reverse": true,
+            "domain": [89, 98]
+          }
+        },
+        "tooltip": [
+          {"field": "operator name", "type": "nominal", "title": "Operator"},
+          {"field": "month", "type": "ordinal", "title": "Month"},
+          {
+            "field": "on-time performance percentage",
+            "type": "quantitative",
+            "title": "On-Time %"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
