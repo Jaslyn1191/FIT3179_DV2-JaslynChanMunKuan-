@@ -1,0 +1,13 @@
+year,route,origin,destination,passenger_movements_thousands
+2002-03,Syd-Mel,Sydney,Melbourne,300
+2002-03,Syd-Cbr,Sydney,Canberra,520
+2002-03,Syd-Bne,Sydney,Brisbane,303
+2002-03,Mel-Adl,Melbourne,Adelaide,199
+2002-03,Mel-Bne,Melbourne,Brisbane,54
+2002-03,Syd-Adl,Sydney,Adelaide,25
+2023-24,Syd-Mel,Sydney,Melbourne,418
+2023-24,Syd-Cbr,Sydney,Canberra,889
+2023-24,Syd-Bne,Sydney,Brisbane,195
+2023-24,Mel-Adl,Melbourne,Adelaide,127
+2023-24,Mel-Bne,Melbourne,Brisbane,66
+2023-24,Syd-Adl,Sydney,Adelaide,19
