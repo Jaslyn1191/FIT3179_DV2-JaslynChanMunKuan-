@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Public Transport Daily Operational Performance in Victoria",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/dumbbell_chart/data/transport_mode_performance.csv"
+  },
+  "transform": [
+    {
+      "calculate": "-datum.pct_ontime",
+      "as": "neg_pct_ontime"
+    },
+    {
+      "fold": ["neg_pct_ontime", "pct_delivered"],
+      "as": ["metric_key", "plot_value"]
+    },
+    {
+      "calculate": "datum.metric_key == 'neg_pct_ontime' ? 'Services On-Time' : 'Services Delivered'",
+      "as": "Metric"
+    }
+  ],
+  "facet": {
+    "row": {
+      "field": "mode",
+      "type": "nominal",
+      "title": "Transport Mode"
+    }
+  },
+  "spec": {
+    "width": 600,
+    "height": 160,
+    "mark": "bar",
+    "encoding": {
+      "y": {
+        "field": "date",
+        "type": "ordinal",
+        "title": "Date",
+        "sort": "descending",
+        "axis": {
+          "labels": true,
+          "ticks": true
+        }
+      },
+      "x": {
+        "field": "plot_value",
+        "type": "quantitative",
+        "title": "% Performance",
+        "scale": {
+          "domain": [-100, 100]
+        },
+        "axis": {
+          "values": [
+            -100, -95, -90, -85, -80, -75, -70, -65, -60, -55, -50, -45, -40, -35, -30, -25, -20, -15, -10, -5,
+            0,
+            5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100
+          ],
+          "labelExpr": "abs(datum.value)",
+          "labelAngle": -45
+        }
+      },
+      "color": {
+        "field": "Metric",
+        "type": "nominal",
+        "title": "Metric",
+        "scale": {
+          "domain": ["Services On-Time", "Services Delivered"],
+          "range": ["#d95f02", "#2b5c8f"]
+        }
+      },
+      "tooltip": [
+        {"field": "mode", "type": "nominal", "title": "Mode"},
+        {"field": "date", "type": "ordinal", "title": "Date"},
+        {"field": "Metric", "type": "nominal"},
+        {"field": "pct_ontime", "type": "quantitative", "format": ".1f", "title": "% On-Time"},
+        {"field": "pct_delivered", "type": "quantitative", "format": ".1f", "title": "% Delivered"}
+      ]
+    }
+  },
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  }
+}
