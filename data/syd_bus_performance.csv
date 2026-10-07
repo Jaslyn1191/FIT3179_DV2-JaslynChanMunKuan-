@@ -1,0 +1,131 @@
+operator name,month,on-time performance percentage
+Busways R1,2025-08,93.4
+Busways R1,2025-09,93.4
+Busways R1,2025-10,94.3
+Busways R1,2025-11,93.3
+Busways R1,2025-12,95.5
+Busways R1,2026-01,97.1
+Busways R1,2026-02,92.6
+Busways R1,2026-03,93.2
+Busways R1,2026-04,94.5
+Busways R1,2026-05,93.4
+Busways R1,2026-06,94.1
+Busways R1,2026-07,94.9
+Busways R1,2026-08,94.6
+Transit Systems NSW SW,2025-08,92.3
+Transit Systems NSW SW,2025-09,92.8
+Transit Systems NSW SW,2025-10,93.3
+Transit Systems NSW SW,2025-11,92.9
+Transit Systems NSW SW,2025-12,94.5
+Transit Systems NSW SW,2026-01,95.4
+Transit Systems NSW SW,2026-02,90.8
+Transit Systems NSW SW,2026-03,89.6
+Transit Systems NSW SW,2026-04,90.7
+Transit Systems NSW SW,2026-05,89.7
+Transit Systems NSW SW,2026-06,89.9
+Transit Systems NSW SW,2026-07,91.7
+Transit Systems NSW SW,2026-08,90.7
+Transit Systems NSW,2025-08,92.3
+Transit Systems NSW,2025-09,93.1
+Transit Systems NSW,2025-10,94.0
+Transit Systems NSW,2025-11,93.4
+Transit Systems NSW,2025-12,94.2
+Transit Systems NSW,2026-01,94.6
+Transit Systems NSW,2026-02,92.5
+Transit Systems NSW,2026-03,93.1
+Transit Systems NSW,2026-04,92.4
+Transit Systems NSW,2026-05,92.3
+Transit Systems NSW,2026-06,92.2
+Transit Systems NSW,2026-07,93.2
+Transit Systems NSW,2026-08,93.4
+CDC NSW R4,2025-08,94.6
+CDC NSW R4,2025-09,94.5
+CDC NSW R4,2025-10,94.9
+CDC NSW R4,2025-11,93.5
+CDC NSW R4,2025-12,95.4
+CDC NSW R4,2026-01,96.6
+CDC NSW R4,2026-02,93.1
+CDC NSW R4,2026-03,94.8
+CDC NSW R4,2026-04,95.9
+CDC NSW R4,2026-05,94.9
+CDC NSW R4,2026-06,95.5
+CDC NSW R4,2026-07,96.5
+CDC NSW R4,2026-08,96.6
+Transit Systems West,2025-08,94.4
+Transit Systems West,2025-09,95.1
+Transit Systems West,2025-10,94.6
+Transit Systems West,2025-11,92.7
+Transit Systems West,2025-12,94.2
+Transit Systems West,2026-01,95.7
+Transit Systems West,2026-02,91.6
+Transit Systems West,2026-03,93.7
+Transit Systems West,2026-04,94.2
+Transit Systems West,2026-05,93.5
+Transit Systems West,2026-06,94.7
+Transit Systems West,2026-07,95.1
+Transit Systems West,2026-08,94.3
+Busways North West,2025-08,92.7
+Busways North West,2025-09,93.8
+Busways North West,2025-10,93.7
+Busways North West,2025-11,91.4
+Busways North West,2025-12,94.2
+Busways North West,2026-01,95.4
+Busways North West,2026-02,91.6
+Busways North West,2026-03,92.6
+Busways North West,2026-04,94.2
+Busways North West,2026-05,92.2
+Busways North West,2026-06,93.5
+Busways North West,2026-07,95.4
+Busways North West,2026-08,93.8
+Keolis Downer Northern Beaches,2025-08,94.5
+Keolis Downer Northern Beaches,2025-09,94.3
+Keolis Downer Northern Beaches,2025-10,94.3
+Keolis Downer Northern Beaches,2025-11,93.1
+Keolis Downer Northern Beaches,2025-12,93.9
+Keolis Downer Northern Beaches,2026-01,95.7
+Keolis Downer Northern Beaches,2026-02,92.6
+Keolis Downer Northern Beaches,2026-03,92.7
+Keolis Downer Northern Beaches,2026-04,94.1
+Keolis Downer Northern Beaches,2026-05,93.2
+Keolis Downer Northern Beaches,2026-06,93.7
+Keolis Downer Northern Beaches,2026-07,94.3
+Keolis Downer Northern Beaches,2026-08,93.8
+Transdev John Holland Buses,2025-08,95.5
+Transdev John Holland Buses,2025-09,95.8
+Transdev John Holland Buses,2025-10,94.9
+Transdev John Holland Buses,2025-11,94.4
+Transdev John Holland Buses,2025-12,95.2
+Transdev John Holland Buses,2026-01,97.0
+Transdev John Holland Buses,2026-02,94.1
+Transdev John Holland Buses,2026-03,95.2
+Transdev John Holland Buses,2026-04,96.1
+Transdev John Holland Buses,2026-05,95.7
+Transdev John Holland Buses,2026-06,96.8
+Transdev John Holland Buses,2026-07,97.2
+Transdev John Holland Buses,2026-08,95.4
+U-Go Mobility,2025-08,94.0
+U-Go Mobility,2025-09,94.6
+U-Go Mobility,2025-10,95.1
+U-Go Mobility,2025-11,94.0
+U-Go Mobility,2025-12,94.8
+U-Go Mobility,2026-01,96.8
+U-Go Mobility,2026-02,92.6
+U-Go Mobility,2026-03,93.6
+U-Go Mobility,2026-04,94.9
+U-Go Mobility,2026-05,93.6
+U-Go Mobility,2026-06,94.5
+U-Go Mobility,2026-07,95.6
+U-Go Mobility,2026-08,94.9
+CDC NSW R14,2025-08,93.9
+CDC NSW R14,2025-09,94.2
+CDC NSW R14,2025-10,94.9
+CDC NSW R14,2025-11,94.1
+CDC NSW R14,2025-12,95.9
+CDC NSW R14,2026-01,95.6
+CDC NSW R14,2026-02,92.6
+CDC NSW R14,2026-03,93.8
+CDC NSW R14,2026-04,95.8
+CDC NSW R14,2026-05,94.3
+CDC NSW R14,2026-06,94.5
+CDC NSW R14,2026-07,95.8
+CDC NSW R14,2026-08,94.8
