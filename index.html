@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vega-Lite Visualizations</title>
+
+  <!-- Import Vega, Vega-Lite, & Vega-Embed CDN Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 24px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    .chart-container {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Data Visualizations</h1>
+
+  <!-- Container DIVs for each visualization -->
+  <div id="vis1" class="chart-container"></div>
+  <div id="vis2" class="chart-container"></div>
+  <div id="vis3" class="chart-container"></div>
+  <div id="vis4" class="chart-container"></div>
+
+  <!-- Vega-Embed Javascript -->
+  <script type="text/javascript">
+    // Configuration options (e.g., disable default action menu or enable responsive sizing)
+    var embedOpt = { "actions": true };
+
+    vegaEmbed('#vis1', 'choropleth_map.vg.json', embedOpt).catch(console.error);
+    vegaEmbed('#vis2', 'dot_map.vg.json', embedOpt).catch(console.error);
+    vegaEmbed('#vis3', 'dumbbell_chart.vg.json', embedOpt).catch(console.error);
+    vegaEmbed('#vis4', 'heatmap_dotplot.vg.json', embedOpt).catch(console.error);
+  </script>
+
+</body>
+</html>
