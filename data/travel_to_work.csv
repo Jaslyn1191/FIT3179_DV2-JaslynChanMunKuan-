@@ -1,9 +1,41 @@
-State/Territory,Number of employed persons
-Victoria,138871
-New South Wales,147493
-Queensland,100393
-South Australia,44458
-Western Australia,96782
-Tasmania,8052
-Northern Territory,2918
-Australian Capital Territory,15614
+state,year,number of employed persons
+New South Wales,2001,249096
+Victoria,2001,119408
+Queensland,2001,68732
+South Australia,2001,28282
+Western Australia,2001,34294
+Tasmania,2001,4290
+Northern Territory,2001,2711
+Australian Capital Territory,2001,7506
+New South Wales,2006,265113
+Victoria,2006,143412
+Queensland,2006,91302
+South Australia,2006,36140
+Western Australia,2006,47087
+Tasmania,2006,5156
+Northern Territory,2006,3082
+Australian Capital Territory,2006,10374
+New South Wales,2011,317806
+Victoria,2011,190018
+Queensland,2011,113051
+South Australia,2011,39880
+Western Australia,2011,65538
+Tasmania,2011,5672
+Northern Territory,2011,3306
+Australian Capital Territory,2011,11208
+New South Wales,2016,397173
+Victoria,2016,238249
+Queensland,2016,110920
+South Australia,2016,41548
+Western Australia,2016,71026
+Tasmania,2016,5362
+Northern Territory,2016,4966
+Australian Capital Territory,2016,12462
+New South Wales,2021,147493
+Victoria,2021,138871
+Queensland,2021,100393
+South Australia,2021,44458
+Western Australia,2021,96782
+Tasmania,2021,8052
+Northern Territory,2021,2918
+Australian Capital Territory,2021,15614
