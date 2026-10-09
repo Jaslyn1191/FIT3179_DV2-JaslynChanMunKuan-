@@ -1,35 +1,55 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-
-  "title": "Public Transport Stops in Victoria",
-
-  "width": 600,
-  "height": 400,
-
-  "projection": {
-    "type": "mercator",
-    "center": [145, -37],
-    "scale": 1200
+  "title": {
+    "text": "Public Transport Stops in Victoria",
+    "subtitle": "Distribution of stops by transport mode"
   },
-
-  "layer": [
-
+  "width": 800,
+  "height": 500,
+  "params": [
     {
-      "data": {
-        "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/map/transport_method/js/STE_2016_AUST.json",
-        "format": {
-          "type": "topojson",
-          "feature": "STE_2016_AUST"
-        }
-      },
-
-      "mark": {
-        "type": "geoshape",
-        "fill": "lightgray",
-        "stroke": "white"
+      "name": "zoom_level",
+      "value": 4500,
+      "bind": {
+        "input": "range",
+        "min": 1000,
+        "max": 10000,
+        "step": 250,
+        "name": "Zoom: "
       }
     },
-
+    {
+      "name": "center_to",
+      "value": [144.5, -36.8],
+      "bind": {
+        "input": "select",
+        "options": [
+          [144.5, -36.8],
+          [145, -37.8],
+          [143.5, -36.5],
+          [146.5, -37],
+          [142, -36.5],
+          [144, -38.5]
+        ],
+        "labels": [
+          "Victoria Wide",
+          "Melbourne",
+          "Western Victoria",
+          "Eastern Victoria",
+          "North-West Victoria",
+          "South-West Victoria"
+        ],
+        "name": "Map Centre: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "mercator",
+    "center": {"expr": "center_to"},
+    "scale": {"expr": "zoom_level"}
+  },
+  "layer": [
     {
       "data": {
         "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/map/transport_method/js/STE_2016_AUST.json",
@@ -38,21 +58,42 @@
           "feature": "STE_2016_AUST"
         }
       },
-
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f1f5f9",
+        "stroke": "#cbd5e1",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.STE_NAME16",
+            "type": "nominal",
+            "title": "State"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/map/transport_method/js/STE_2016_AUST.json",
+        "format": {
+          "type": "topojson",
+          "feature": "STE_2016_AUST"
+        }
+      },
       "transform": [
         {
           "filter": "datum.properties.STE_NAME16 === 'Victoria'"
         }
       ],
-
       "mark": {
         "type": "geoshape",
-        "fill": "lightgray",
-        "stroke": "black",
-        "strokeWidth": 2
+        "fill": "#dbeafe",
+        "stroke": "#475569",
+        "strokeWidth": 1.5
       }
     },
-
     {
       "data": {
         "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/dot_map/transportation_station_vic/js/_published_public_transport_public_transport_stops_public_transport_stops.geojson",
@@ -61,47 +102,72 @@
           "property": "features"
         }
       },
-
       "transform": [
+        {
+          "filter": "datum.geometry.type === 'Point'"
+        },
         {
           "filter": "datum.geometry.coordinates[0] >= 140.9 && datum.geometry.coordinates[0] <= 149.0 && datum.geometry.coordinates[1] >= -39.2 && datum.geometry.coordinates[1] <= -34.0"
         }
       ],
-
       "mark": {
         "type": "circle",
-        "size": 20,
-        "opacity": 0.7
+        "size": 8,
+        "opacity": 0.65,
+        "stroke": "white",
+        "strokeWidth": 0.3
       },
-
       "encoding": {
         "longitude": {
           "field": "geometry.coordinates[0]",
           "type": "quantitative"
         },
-
         "latitude": {
           "field": "geometry.coordinates[1]",
           "type": "quantitative"
         },
-
         "color": {
           "field": "properties.MODE",
-          "title": "Types of transportation",
-          "type": "nominal"
+          "type": "nominal",
+          "title": "Transport mode",
+          "scale": {
+            "scheme": "tableau10"
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
         },
-
         "tooltip": [
           {
             "field": "properties.STOP_NAME",
-            "title": "Stop"
+            "type": "nominal",
+            "title": "Stop name"
           },
           {
             "field": "properties.MODE",
-            "title": "Types of transportation"
+            "type": "nominal",
+            "title": "Transport mode"
+          },
+          {
+            "field": "geometry.coordinates[1]",
+            "type": "quantitative",
+            "title": "Latitude",
+            "format": ".4f"
+          },
+          {
+            "field": "geometry.coordinates[0]",
+            "type": "quantitative",
+            "title": "Longitude",
+            "format": ".4f"
           }
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
 }
