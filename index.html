@@ -3,48 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vega-Lite Visualizations</title>
+  <title>Australian Public Transport Data Visualizations</title>
 
-  <!-- Import Vega, Vega-Lite, & Vega-Embed CDN Libraries -->
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Vega, Vega-Lite, & Vega-Embed CDN Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      margin: 24px;
-      background-color: #f8f9fa;
-      color: #333;
-    }
-    .chart-container {
-      margin-bottom: 40px;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-  </style>
 </head>
 <body>
 
-  <h1>Data Visualizations</h1>
+  <header>
+    <h1>Public Transport & Commute Analysis</h1>
+    <p>FIT3179 Data Visualization Project</p>
+  </header>
 
-  <!-- Container DIVs for each visualization -->
-  <div id="vis1" class="chart-container"></div>
-  <div id="vis2" class="chart-container"></div>
-  <div id="vis3" class="chart-container"></div>
-  <div id="vis4" class="chart-container"></div>
+  <main>
+    <div class="dashboard-grid">
+      <div class="chart-card">
+        <h2>1. Choropleth Map</h2>
+        <div id="vis1"></div>
+      </div>
 
-  <!-- Vega-Embed Javascript -->
+      <div class="chart-card">
+        <h2>2. Dot Map</h2>
+        <div id="vis2"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>3. Dumbbell Chart</h2>
+        <div id="vis3"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>4. Heatmap / Dot Plot</h2>
+        <div id="vis4"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>5. Connected Dot Map</h2>
+        <div id="vis5"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>6. Butterfly Chart</h2>
+        <div id="vis6"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>7. Slope Graph</h2>
+        <div id="vis7"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>8. Symbol Map</h2>
+        <div id="vis8"></div>
+      </div>
+    </div>
+  </main>
+
   <script type="text/javascript">
-    // Configuration options (e.g., disable default action menu or enable responsive sizing)
-    var embedOpt = { "actions": true };
+    var embedOpt = { "actions": false };
 
     vegaEmbed('#vis1', 'choropleth_map.vg.json', embedOpt).catch(console.error);
     vegaEmbed('#vis2', 'dot_map.vg.json', embedOpt).catch(console.error);
     vegaEmbed('#vis3', 'dumbbell_chart.vg.json', embedOpt).catch(console.error);
     vegaEmbed('#vis4', 'heatmap_dotplot.vg.json', embedOpt).catch(console.error);
+    vegaEmbed('#vis5', 'connected_dotplot.vg.json', embedOpt).catch(console.error);
+    vegaEmbed('#vis6', 'butterfly_chart.vg.json', embedOpt).catch(console.error);
+    vegaEmbed('#vis7', 'slope_graph.vg.json', embedOpt).catch(console.error);
+    vegaEmbed('#vis8', 'symbol_map.vg.json', embedOpt).catch(console.error);
   </script>
 
 </body>
