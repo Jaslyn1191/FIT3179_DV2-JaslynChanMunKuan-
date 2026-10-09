@@ -1,0 +1,9 @@
+Capital city,longitude,latitude,Heavy rail (million passenger trips),Light rail (million passenger trips),UPT Bus (million passenger trips),Ferry (million passenger trips),Total patronage (million passenger trips)
+Sydney,151.2093,-33.8688,348.5,46.9,293.4,19.7,708.5
+Melbourne,144.9631,-37.8136,201.5,160.2,118.5,0,480.2
+Brisbane,153.0251,-27.4698,55.4,0,98.9,7.4,161.7
+Adelaide,138.6007,-34.9285,14.6,9,45.9,0,69.5
+Perth,115.8605,-31.9505,61.9,0,85.9,0.9,148.7
+Hobart,147.3272,-42.8821,0,0,6.5,0.25,6.75
+Darwin,130.8456,-12.4634,0,0,4.6,0,4.6
+Canberra,149.13,-35.2809,0,4.17,16.41,0,20.58
