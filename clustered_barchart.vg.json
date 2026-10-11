@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": { "text": "Daily On-Time Performance by Mode" },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/data/transport_mode_performance.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": { 
+      "field": "date", 
+      "type": "ordinal", 
+      "title": "Date",
+      "sort": "ascending" 
+    },
+    "y": { 
+      "field": "pct_ontime", 
+      "type": "quantitative", 
+      "title": "On-Time Performance (%)"
+    },
+    "color": { 
+      "field": "mode", 
+      "type": "nominal", 
+      "title": "Transport Mode" 
+    },
+    "xOffset": { 
+      "field": "mode" 
+    }
+  }
+}
