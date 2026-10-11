@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Employed Persons Travelling to Work by Public Transport, by State (2001-2021)",
+  "title": "Public Transport Mode Share by State (2001-2021)",
   "width": 800,
   "height": 500,
   "params": [
@@ -62,110 +62,64 @@
     "center": {"expr": "center_to"},
     "scale": {"expr": "zoom_level"}
   },
-  "layer": [
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/data/travel_to_work.csv"
+  },
+  "transform": [
+    {"filter": "datum.year == Year_selection"},
     {
-      "data": {
-        "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/map/transport_method/js/STE_2016_AUST.json",
-        "format": {"type": "topojson", "feature": "STE_2016_AUST"}
-      },
-      "mark": {
-        "type": "geoshape",
-        "fill": "#e0e0e0",
-        "stroke": "white",
-        "strokeWidth": 1
-      },
-      "encoding": {
-        "tooltip": {
-          "field": "properties.STE_NAME16",
-          "type": "nominal",
-          "title": "State"
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {"state": "New South Wales", "year": 2001, "number of employed persons": 249096},
-          {"state": "Victoria", "year": 2001, "number of employed persons": 119408},
-          {"state": "Queensland", "year": 2001, "number of employed persons": 68732},
-          {"state": "South Australia", "year": 2001, "number of employed persons": 28282},
-          {"state": "Western Australia", "year": 2001, "number of employed persons": 34294},
-          {"state": "Tasmania", "year": 2001, "number of employed persons": 4290},
-          {"state": "Northern Territory", "year": 2001, "number of employed persons": 2711},
-          {"state": "Australian Capital Territory", "year": 2001, "number of employed persons": 7506},
-          {"state": "New South Wales", "year": 2006, "number of employed persons": 265113},
-          {"state": "Victoria", "year": 2006, "number of employed persons": 143412},
-          {"state": "Queensland", "year": 2006, "number of employed persons": 91302},
-          {"state": "South Australia", "year": 2006, "number of employed persons": 36140},
-          {"state": "Western Australia", "year": 2006, "number of employed persons": 47087},
-          {"state": "Tasmania", "year": 2006, "number of employed persons": 5156},
-          {"state": "Northern Territory", "year": 2006, "number of employed persons": 3082},
-          {"state": "Australian Capital Territory", "year": 2006, "number of employed persons": 10374},
-          {"state": "New South Wales", "year": 2011, "number of employed persons": 317806},
-          {"state": "Victoria", "year": 2011, "number of employed persons": 190018},
-          {"state": "Queensland", "year": 2011, "number of employed persons": 113051},
-          {"state": "South Australia", "year": 2011, "number of employed persons": 39880},
-          {"state": "Western Australia", "year": 2011, "number of employed persons": 65538},
-          {"state": "Tasmania", "year": 2011, "number of employed persons": 5672},
-          {"state": "Northern Territory", "year": 2011, "number of employed persons": 3306},
-          {"state": "Australian Capital Territory", "year": 2011, "number of employed persons": 11208},
-          {"state": "New South Wales", "year": 2016, "number of employed persons": 397173},
-          {"state": "Victoria", "year": 2016, "number of employed persons": 238249},
-          {"state": "Queensland", "year": 2016, "number of employed persons": 110920},
-          {"state": "South Australia", "year": 2016, "number of employed persons": 41548},
-          {"state": "Western Australia", "year": 2016, "number of employed persons": 71026},
-          {"state": "Tasmania", "year": 2016, "number of employed persons": 5362},
-          {"state": "Northern Territory", "year": 2016, "number of employed persons": 4966},
-          {"state": "Australian Capital Territory", "year": 2016, "number of employed persons": 12462},
-          {"state": "New South Wales", "year": 2021, "number of employed persons": 147493},
-          {"state": "Victoria", "year": 2021, "number of employed persons": 138871},
-          {"state": "Queensland", "year": 2021, "number of employed persons": 100393},
-          {"state": "South Australia", "year": 2021, "number of employed persons": 44458},
-          {"state": "Western Australia", "year": 2021, "number of employed persons": 96782},
-          {"state": "Tasmania", "year": 2021, "number of employed persons": 8052},
-          {"state": "Northern Territory", "year": 2021, "number of employed persons": 2918},
-          {"state": "Australian Capital Territory", "year": 2021, "number of employed persons": 15614}
-        ]
-      },
-      "transform": [
-        {"filter": "datum.year == Year_selection"},
-        {
-          "lookup": "state",
-          "from": {
-            "data": {
-              "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/map/transport_method/js/STE_2016_AUST.json",
-              "format": {
-                "type": "topojson",
-                "feature": "STE_2016_AUST"
-              }
-            },
-            "key": "properties.STE_NAME16"
-          },
-          "as": "geo"
-        }
-      ],
-      "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
-      "encoding": {
-        "shape": {"field": "geo", "type": "geojson"},
-        "color": {
-          "field": "number of employed persons",
-          "type": "quantitative",
-          "title": "Employed Persons",
-          "scale": {"scheme": "reds"},
-          "legend": {"format": ",d"}
+      "lookup": "state",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/js/STE_2016_AUST.json",
+          "format": {"type": "topojson", "feature": "STE_2016_AUST"}
         },
-        "tooltip": [
-          {"field": "state", "type": "nominal", "title": "State"},
-          {
-            "field": "number of employed persons",
-            "type": "quantitative",
-            "title": "Public Transport Users",
-            "format": ","
-          },
-          {"field": "year", "type": "quantitative", "title": "Year"}
-        ]
-      }
+        "key": "properties.STE_NAME16"
+      },
+      "as": "geo"
     }
   ],
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.8},
+  "encoding": {
+    "shape": {"field": "geo", "type": "geojson"},
+    "color": {
+      "field": "public transport mode share",
+      "type": "quantitative",
+      "title": "Mode Share (%)",
+      "scale": {
+        "type": "threshold",
+        "domain": [3.5, 6.5, 9.5],
+        "range": ["#fee5d9", "#fcae91", "#fb6a4a", "#cb181d"]
+      },
+      "legend": {
+        "type": "symbol",
+        "symbolType": "square",
+        "symbolSize": 200,
+        "values": [1, 4, 7, 10],
+        "labelExpr": "datum.value == 1 ? '1 - 3' : datum.value == 4 ? '4 - 6' : datum.value == 7 ? '7 - 9' : '10 - 12'"
+      }
+    },
+    "tooltip": [
+      {"field": "state", "type": "nominal", "title": "State"},
+      {
+        "field": "public transport mode share",
+        "type": "quantitative",
+        "title": "Public Transport Share (%)"
+      },
+      {
+        "field": "number of employed persons",
+        "type": "quantitative",
+        "title": "PT Commuters",
+        "format": ","
+      },
+      {
+        "field": "total employed persons",
+        "type": "quantitative",
+        "title": "Total Employed",
+        "format": ","
+      },
+      {"field": "year", "type": "quantitative", "title": "Year"}
+    ]
+  },
   "config": {}
 }
