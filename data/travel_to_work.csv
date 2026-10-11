@@ -1,41 +1,41 @@
-state,year,number of employed persons
-New South Wales,2001,249096
-Victoria,2001,119408
-Queensland,2001,68732
-South Australia,2001,28282
-Western Australia,2001,34294
-Tasmania,2001,4290
-Northern Territory,2001,2711
-Australian Capital Territory,2001,7506
-New South Wales,2006,265113
-Victoria,2006,143412
-Queensland,2006,91302
-South Australia,2006,36140
-Western Australia,2006,47087
-Tasmania,2006,5156
-Northern Territory,2006,3082
-Australian Capital Territory,2006,10374
-New South Wales,2011,317806
-Victoria,2011,190018
-Queensland,2011,113051
-South Australia,2011,39880
-Western Australia,2011,65538
-Tasmania,2011,5672
-Northern Territory,2011,3306
-Australian Capital Territory,2011,11208
-New South Wales,2016,397173
-Victoria,2016,238249
-Queensland,2016,110920
-South Australia,2016,41548
-Western Australia,2016,71026
-Tasmania,2016,5362
-Northern Territory,2016,4966
-Australian Capital Territory,2016,12462
-New South Wales,2021,147493
-Victoria,2021,138871
-Queensland,2021,100393
-South Australia,2021,44458
-Western Australia,2021,96782
-Tasmania,2021,8052
-Northern Territory,2021,2918
-Australian Capital Territory,2021,15614
+state,year,number of employed persons,total employed persons,public transport mode share
+New South Wales,2001,249096,2750893,9
+Victoria,2001,119408,2059006,6
+Queensland,2001,68732,1570361,4
+South Australia,2001,28282,639186,4
+Western Australia,2001,34294,851123,4
+Tasmania,2001,4290,185584,2
+Northern Territory,2001,2711,82238,3
+Australian Capital Territory,2001,7506,162118,5
+New South Wales,2006,265113,2968266,9
+Victoria,2006,143412,2267885,6
+Queensland,2006,91302,1840491,5
+South Australia,2006,36140,682787,5
+Western Australia,2006,47087,967002,5
+Tasmania,2006,5156,205372,3
+Northern Territory,2006,3082,89328,3
+Australian Capital Territory,2006,10374,179350,6
+New South Wales,2011,317806,3285126,10
+Victoria,2011,190018,2514643,8
+Queensland,2011,113051,2042201,6
+South Australia,2011,39880,722866,6
+Western Australia,2011,65538,1126818,6
+Tasmania,2011,5672,215901,3
+Northern Territory,2011,3306,97973,3
+Australian Capital Territory,2011,11208,195683,6
+New South Wales,2016,397173,3528707,11
+Victoria,2016,238249,2787038,9
+Queensland,2016,110920,2136826,5
+South Australia,2016,41548,733485,6
+Western Australia,2016,71026,1189410,6
+Tasmania,2016,5362,211811,3
+Northern Territory,2016,4966,103456,5
+Australian Capital Territory,2016,12462,207268,6
+New South Wales,2021,147493,3668582,4
+Victoria,2021,138871,2933962,5
+Queensland,2021,100393,2339228,4
+South Australia,2021,44458,772019,6
+Western Australia,2021,96782,1299680,7
+Tasmania,2021,8052,237341,3
+Northern Territory,2021,2918,100240,3
+Australian Capital Territory,2021,15614,226389,7
