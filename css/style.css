@@ -1,70 +1,219 @@
-/* Global Page Styles */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f4f6f8;
-  color: #212529;
-  margin: 0;
-  padding: 0;
+
+* {
+  box-sizing: border-box;
 }
 
-/* Header Banner */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* HEADER */
 header {
   background-color: #1e293b;
   color: #ffffff;
-  padding: 32px 20px;
+  padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
+  font-family: "Times New Roman", Times, serif;
   margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+header h2 {
+  margin: 8px 0 0;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 header p {
-  margin: 8px 0 0 0;
-  color: #94a3b8;
+  margin: 12px auto 0;
+  color: #cbd5e1;
   font-size: 1rem;
+  max-width: 650px;
 }
 
-/* Main Content Container */
+/* NAVIGATION */
+nav {
+  background-color: #ffffff;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+nav a {
+  color: #334155;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #0d9488;
+}
+
+/* MAIN CONTENT */
 main {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 32px 24px;
 }
 
-/* Responsive Grid Layout for Charts */
-.dashboard-grid {
+.intro {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.intro p {
+  color: #64748b;
+}
+
+/* STORY SECTIONS */
+.chapter {
+  margin-bottom: 64px;
+  scroll-margin-top: 24px;
+}
+
+.chapter-heading {
+  margin-bottom: 24px;
+  border-left: 5px solid #0d9488;
+  padding-left: 16px;
+}
+
+.chapter-heading h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0d9488;
+}
+
+.chapter-heading h3 {
+  margin: 4px 0;
+  font-size: 1.7rem;
+}
+
+.chapter-heading p {
+  color: #64748b;
+  margin: 4px 0;
+  max-width: 800px;
+}
+
+/* CHART GRID */
+.chart-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
-/* Chart Cards */
 .chart-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
   border: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 0;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
 }
 
-.chart-card h2 {
-  margin-top: 0;
+.chart-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.chart-card .question {
+  color: #64748b;
+  font-size: 0.9rem;
   margin-bottom: 16px;
-  font-size: 1.15rem;
-  color: #334155;
-  width: 100%;
-  text-align: left;
 }
 
-.vega-embed {
+.chart {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  min-height: 250px;
+}
+
+.chart-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.chart-card.full-width .chart {
+  min-height: 350px;
+}
+
+/* STORY TAKEAWAY */
+.takeaway {
+  background: #ecfdf5;
+  border-left: 4px solid #0d9488;
+  padding: 20px 24px;
+  margin-top: 24px;
+  border-radius: 0 8px 8px 0;
+}
+
+.takeaway h3 {
+  margin: 0 0 6px;
+  color: #115e59;
+}
+
+.takeaway p {
+  margin: 0;
+  color: #334155;
+}
+
+/* CONCLUSION */
+.conclusion {
+  background: #1e293b;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 36px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.conclusion p {
+  color: #cbd5e1;
+  max-width: 750px;
+  margin: 12px auto;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #64748b;
+  font-size: 0.85rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 24px 16px;
+  }
+
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card.full-width {
+    grid-column: auto;
+  }
+
+  .conclusion {
+    padding: 24px;
+  }
 }

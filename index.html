@@ -1,80 +1,285 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Australian Public Transport Data Visualizations</title>
 
-  <!-- External Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Ride Relaxed, Travel Safely</title>
 
-  <!-- Vega, Vega-Lite, & Vega-Embed CDN Libraries -->
+  <!-- Vega-Lite libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  
 </head>
+
 <body>
 
   <header>
-    <h1>Public Transport & Commute Analysis</h1>
-    <p>FIT3179 Data Visualization Project</p>
+    <h1>Ride Relaxed, Travel Safely</h1>
+    <h2>Urban Public Transport in Australia</h2>
+    <p>
+      Discover how Australians commute, connect and travel every day.
+    </p>
   </header>
 
+  <nav>
+    <a href="#commuting">01. Commuting</a>
+    <a href="#connections">02. Connections</a>
+    <a href="#patronage">03. Urban Travel</a>
+    <a href="#reliability">04. Reliability</a>
+  </nav>
+
   <main>
-    <div class="dashboard-grid">
-      <div class="chart-card">
-        <h2>1. Choropleth Map</h2>
-        <div id="vis1"></div>
-      </div>
 
-      <div class="chart-card">
-        <h2>2. Dot Map</h2>
-        <div id="vis2"></div>
-      </div>
+    <section class="intro">
+      <h2>Understanding Australia's Public Transport</h2>
+      <p>
+        From daily commutes to connections between cities, explore
+        passenger travel and discover what the data reveals about
+        public transport use and service performance.
+      </p>
+    </section>
 
-      <div class="chart-card">
-        <h2>3. Dumbbell Chart</h2>
-        <div id="vis3"></div>
-      </div>
+    <!-- CHAPTER 1 -->
+    <section class="chapter" id="commuting">
 
-      <div class="chart-card">
-        <h2>4. Heatmap / Dot Plot</h2>
-        <div id="vis4"></div>
-      </div>
-
-      <div class="chart-card">
-        <h2>5. Connected Dot Map</h2>
-        <div id="vis5"></div>
-      </div>
-
-      <div class="chart-card">
-        <h2>6. Butterfly Chart</h2>
-        <div id="vis6"></div>
-      </div>
-
-      <div class="chart-card">
-        <h2>7. Slope Graph</h2>
-        <div id="vis7"></div>
-      </div>
-
-      <div class="chart-card">
-        <h2>8. Symbol Map</h2>
-        <div id="vis8"></div>
-      </div>
+    <div class="chapter-heading">
+        <h2>01. Commuting</h2>
+        <h3>How Do Australians Commute?</h3>
+        <p>
+        Begin with the national picture. Explore how public transport
+        commuting differs across states and transport modes.
+        </p>
     </div>
+
+      <div class="chart-grid">
+
+        <article class="chart-card full-width">
+          <h3>Public Transport Commuters by State</h3>
+          <p class="question">
+            Where are employed public transport commuters concentrated?
+          </p>
+          <div id="chart1" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Commuting by Transport Mode</h3>
+          <p class="question">
+            How do public transport modes compare with other ways of commuting?
+          </p>
+          <div id="chart2" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Changes in Commuting Patterns</h3>
+          <p class="question">
+            How has public transport commuting changed over time?
+          </p>
+          <div id="chart3" class="chart"></div>
+        </article>
+
+      </div>
+
+      <div class="takeaway">
+        <h3>What does the data tell us?</h3>
+        <p>
+          Compare state-level commuting figures and identify meaningful
+          differences. Explain the patterns using the actual data.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- CHAPTER 2 -->
+    <section class="chapter" id="connections">
+
+      <div class="chapter-heading">
+        <span class="number">CHAPTER 02</span>
+        <h2>Connecting Australia's Cities</h2>
+        <p>
+          Move beyond daily commuting to explore passenger movements
+          between Australia's capital cities.
+        </p>
+      </div>
+
+      <div class="chart-grid">
+
+        <article class="chart-card full-width">
+          <h3>Inter-Capital City Passenger Flows</h3>
+          <p class="question">
+            Which capital-city pairs have larger recorded passenger flows?
+          </p>
+          <div id="chart4" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Passenger Volumes by City Pair</h3>
+          <p class="question">
+            Which city connections account for the most passengers?
+          </p>
+          <div id="chart5" class="chart"></div>
+        </article>
+
+      </div>
+
+      <div class="takeaway">
+        <h3>What does the data tell us?</h3>
+        <p>
+          Identify major passenger connections and discuss how
+          inter-city travel differs from travel within urban areas.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- CHAPTER 3 -->
+    <section class="chapter" id="patronage">
+
+      <div class="chapter-heading">
+        <span class="number">CHAPTER 03</span>
+        <h2>Moving Around Our Cities</h2>
+        <p>
+          Examine public transport patronage across capital cities
+          and compare the use of different transport modes.
+        </p>
+      </div>
+
+      <div class="chart-grid">
+
+        <article class="chart-card">
+          <h3>Public Transport Patronage</h3>
+          <p class="question">
+            How does patronage differ between capital cities?
+          </p>
+          <div id="chart6" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Patronage by Transport Mode</h3>
+          <p class="question">
+            Which modes account for the most passenger trips?
+          </p>
+          <div id="chart7" class="chart"></div>
+        </article>
+
+        <article class="chart-card full-width">
+          <h3>Changes in Public Transport Use</h3>
+          <p class="question">
+            How has patronage changed across the available years?
+          </p>
+          <div id="chart8" class="chart"></div>
+        </article>
+
+      </div>
+
+      <div class="takeaway">
+        <h3>What does the data tell us?</h3>
+        <p>
+          Compare passenger trip volumes across cities and modes,
+          taking account of differences in population, coverage and years.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- CHAPTER 4 -->
+    <section class="chapter" id="reliability">
+
+      <div class="chapter-heading">
+        <span class="number">CHAPTER 04</span>
+        <h2>Can Commuters Rely on Public Transport?</h2>
+        <p>
+          Finish by examining service performance and the consistency
+          of public transport operations.
+        </p>
+      </div>
+
+      <div class="chart-grid">
+
+        <article class="chart-card">
+          <h3>On-Time Performance</h3>
+          <p class="question">
+            How consistently do services arrive on time?
+          </p>
+          <div id="chart9" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Service Delivery</h3>
+          <p class="question">
+            How many scheduled services are actually delivered?
+          </p>
+          <div id="chart10" class="chart"></div>
+        </article>
+
+      </div>
+
+      <div class="takeaway">
+        <h3>What does the data tell us?</h3>
+        <p>
+          Discuss service delivery and punctuality separately.
+          Consider whether performance changes over time and avoid
+          drawing conclusions that the data cannot support.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- FINAL CONCLUSION -->
+    <section class="conclusion">
+      <h2>What Have We Discovered?</h2>
+      <p>
+        Public transport shapes how people commute, connect with
+        other cities and move through urban areas. The data helps
+        us understand passenger demand and service performance.
+      </p>
+      <p>
+        Use the findings from the visualisations above to identify
+        the most important patterns, limitations and implications
+        for Australia's public transport system.
+      </p>
+    </section>
+
   </main>
 
-  <script type="text/javascript">
-    var embedOpt = { "actions": false };
+  <footer>
+    FIT3179 Data Visualisation Project |
+    Data sources and acknowledgements should be listed here.
+  </footer>
 
-    vegaEmbed('#vis1', 'choropleth_map.vg.json', embedOpt).catch(console.error);
-    vegaEmbed('#vis2', 'dot_map.vg.json', embedOpt).catch(console.error);
-    vegaEmbed('#vis3', 'dumbbell_chart.vg.json', embedOpt).catch(console.error);
-    vegaEmbed('#vis4', 'heatmap_dotplot.vg.json', embedOpt).catch(console.error);
-    vegaEmbed('#vis5', 'connected_dotplot.vg.json', embedOpt).catch(console.error);
-    vegaEmbed('#vis6', 'butterfly_chart.vg.json', embedOpt).catch(console.error);
-    vegaEmbed('#vis7', 'slope_graph.vg.json', embedOpt).catch(console.error);
-    vegaEmbed('#vis8', 'symbol_map.vg.json', embedOpt).catch(console.error);
+  <script>
+    // Replace each path with the location of your Vega-Lite JSON file.
+    const charts = [
+      ["chart1", "choropleth_map.vg.json"],
+      ["chart2", "connected_dotplot.vg.json"],
+      ["chart3", "butterfly_chart.vg.json"],
+      ["chart4", "dumbbell_chart.vg.json"],
+      ["chart5", "slope_graph.vg.json"],
+      ["chart6", "symbol_map.vg.json"],
+      ["chart7", "js/your_mode_patronage.json"],
+      ["chart8", "js/your_patronage_trend.json"],
+      ["chart9", "heatmap_dotplot.vg.json"],
+      ["chart10", "js/your_delivery_chart.json"]
+    ];
+
+    charts.forEach(([elementId, specPath]) => {
+      vegaEmbed("#" + elementId, specPath, {
+        actions: false,
+        renderer: "svg"
+      }).catch(error => {
+        console.error("Could not load " + specPath, error);
+
+        document.getElementById(elementId).innerHTML =
+          '<p style="color:#b91c1c;font-size:14px;">' +
+          'Chart not loaded. Check the JSON file path and browser console.' +
+          '</p>';
+      });
+    });
   </script>
 
 </body>
