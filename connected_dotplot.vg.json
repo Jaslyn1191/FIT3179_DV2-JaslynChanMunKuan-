@@ -72,7 +72,7 @@
           "title": "Financial Year",
           "scale": {
             "domain": ["2002-03", "2023-24"],
-            "range": ["#2b5c8f", "#d95f02"]
+            "range": ["#7c02d9", "#02d91f"]
           }
         },
         "tooltip": [
