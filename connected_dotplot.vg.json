@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": {
     "text": "20-Year Shift in Inter-Capital Non-Air Passenger Travel",
-    "subtitle": "Comparing passenger movements ('000) between FY 2002-03 and FY 2023-24",
     "anchor": "start"
   },
   "data": {

@@ -1,8 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": {
-    "text": "Average Operational Performance by Public Transport Mode",
-    "subtitle": "Comparing % Services Delivered vs % Services On-Time",
+    "text": "Average Operational Performance by Public Transport Mode in Victoria",
     "anchor": "start"
   },
   "data": {
