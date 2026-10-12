@@ -25,7 +25,11 @@
     "color": { 
       "field": "mode", 
       "type": "nominal", 
-      "title": "Transport Mode" 
+      "title": "Transport Mode",
+      "scale": {
+        "domain": ["Metropolitan train", "Metropolitan tram", "Regional train (V/Line)"],
+        "range": ["#d902a3", "#d5d902", "#5102d9"]
+      } 
     },
     "xOffset": { 
       "field": "mode" 
