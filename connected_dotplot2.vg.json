@@ -72,8 +72,8 @@
           "type": "nominal",
           "title": "Metric",
           "scale": {
-            "domain": ["Services Delivered", "Services On-Time"],
-            "range": ["#2b5c8f", "#d95f02"]
+            "domain": ["Services On-Time", "Services Delivered"],
+            "range": ["#d95f02", "#2b5c8f"]
           }
         },
         "tooltip": [
