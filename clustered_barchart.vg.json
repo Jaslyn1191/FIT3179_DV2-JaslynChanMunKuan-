@@ -14,7 +14,7 @@
       "title": "Date",
       "sort": "ascending",
       "axis": {
-        "labelAngle": -45
+        "labelAngle": 0
       } 
     },
     "y": { 
@@ -28,7 +28,7 @@
       "title": "Transport Mode",
       "scale": {
         "domain": ["Metropolitan train", "Metropolitan tram", "Regional train (V/Line)"],
-        "range": ["#d902a3", "#d5d902", "#5102d9"]
+        "range": ["#0072ce", "#78be20", "#e65c00"]
       } 
     },
     "xOffset": { 
