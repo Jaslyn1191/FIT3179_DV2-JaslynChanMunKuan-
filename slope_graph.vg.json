@@ -12,7 +12,10 @@
             "field": "year",
             "type": "ordinal",
             "scale": {"padding": 0.5},
-            "title": "Year"
+            "title": "Year",
+            "axis": {
+                "labelAngle": 0
+            }
         }, 
         "y": {
             "field": "number of employed persons",
