@@ -49,11 +49,11 @@
         },
         "tooltip": [
           {"field": "Capital city", "type": "nominal", "title": "City"},
-          {"field": "Total patronage (million passenger trips)", "type": "quantitative", "title": "Total (M)", "format": ".2f"},
-          {"field": "Heavy rail (million passenger trips)", "type": "quantitative", "title": "Heavy Rail (M)", "format": ".2f"},
-          {"field": "Light rail (million passenger trips)", "type": "quantitative", "title": "Light Rail (M)", "format": ".2f"},
-          {"field": "UPT Bus (million passenger trips)", "type": "quantitative", "title": "Bus (M)", "format": ".2f"},
-          {"field": "Ferry (million passenger trips)", "type": "quantitative", "title": "Ferry (M)", "format": ".2f"}
+          {"field": "Total patronage (million passenger trips)", "type": "quantitative", "title": "Total (Million)", "format": ".2f"},
+          {"field": "Heavy rail (million passenger trips)", "type": "quantitative", "title": "Heavy Rail (Million)", "format": ".2f"},
+          {"field": "Light rail (million passenger trips)", "type": "quantitative", "title": "Light Rail (Million)", "format": ".2f"},
+          {"field": "UPT Bus (million passenger trips)", "type": "quantitative", "title": "Bus (Million)", "format": ".2f"},
+          {"field": "Ferry (million passenger trips)", "type": "quantitative", "title": "Ferry (Million)", "format": ".2f"}
         ]
       }
     },

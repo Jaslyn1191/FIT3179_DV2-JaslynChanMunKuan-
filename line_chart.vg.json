@@ -23,7 +23,7 @@
     "y": {
         "field": "number of employed persons", 
         "type": "quantitative",
-        "title": "Number of persons"
+        "title": "Number of Employed Persons"
     },
     "color": {
         "field": "state", 

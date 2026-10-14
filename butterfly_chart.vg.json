@@ -70,8 +70,8 @@
         {"field": "mode", "type": "nominal", "title": "Mode"},
         {"field": "date", "type": "ordinal", "title": "Date"},
         {"field": "Metric", "type": "nominal"},
-        {"field": "pct_ontime", "type": "quantitative", "format": ".1f", "title": "% On-Time"},
-        {"field": "pct_delivered", "type": "quantitative", "format": ".1f", "title": "% Delivered"}
+        {"field": "pct_ontime", "type": "quantitative", "format": ".1f", "title": "On-Time %"},
+        {"field": "pct_delivered", "type": "quantitative", "format": ".1f", "title": "Delivered %"}
       ]
     }
   },

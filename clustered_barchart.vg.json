@@ -6,7 +6,10 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/data/transport_mode_performance.csv"
   },
-  "mark": "bar",
+  "mark": {
+    "type": "bar",
+    "tooltip": true
+  },
   "encoding": {
     "x": { 
       "field": "date", 
@@ -33,6 +36,23 @@
     },
     "xOffset": { 
       "field": "mode" 
-    }
+    },
+    "tooltip": [
+      {
+        "field": "date",
+        "type": "ordinal",
+        "title": "Date"
+      },
+      {
+        "field": "pct_ontime", 
+        "type": "quantitative", 
+        "title": "On-Time Performance (%)"
+      },
+      {
+        "field": "mode", 
+        "type": "nominal", 
+        "title": "Transport Mode"
+      }
+    ]
   }
 }

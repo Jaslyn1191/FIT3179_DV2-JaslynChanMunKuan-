@@ -109,7 +109,7 @@
       {
         "field": "number of employed persons",
         "type": "quantitative",
-        "title": "PT Commuters",
+        "title": "Public Transport Commuters",
         "format": ","
       },
       {

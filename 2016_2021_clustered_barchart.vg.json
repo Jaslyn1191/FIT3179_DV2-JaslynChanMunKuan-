@@ -36,6 +36,23 @@
         "domain": [2016, 2021],
         "range": ["#3b82f6", "#0d9488"]
       }
-    }
+    },
+    "tooltip": [
+      {
+        "field": "transport",
+        "type": "nominal",
+        "title": "Mode of Transport"
+      },
+      {
+        "field": "year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+      {
+        "field": "count",
+        "type": "quantitative",
+        "title": "Number of Commuters"
+      }
+    ]
   }
 }

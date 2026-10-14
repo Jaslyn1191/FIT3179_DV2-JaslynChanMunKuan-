@@ -84,7 +84,7 @@
             "field": "passengers_num",
             "type": "quantitative",
             "format": ",.0f",
-            "title": "Passengers ('000)"
+            "title": "Passengers (Thousands)"
           }
         ]
       }

@@ -28,7 +28,10 @@
       "filter": "datum.Percentage > 0"
     }
   ],
-  "mark": "bar",
+  "mark": {
+    "type": "bar",
+    "tooltip": true
+  },
   "encoding": {
     "x": {
       "field": "Capital city",
