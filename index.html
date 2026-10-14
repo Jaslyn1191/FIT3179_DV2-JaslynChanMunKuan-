@@ -109,6 +109,16 @@
 
         <article class="chart-card">
           <div class="story-text">
+            <h4>Victorian Public Transport Stop Distribution</h4>
+            <p>Explore the spatial footprint of train, tram, bus, and ferry 
+              <br>stops across metropolitan Melbourne and regional Victoria. 
+              <br>Use the map controls to zoom into specific regions.</p>
+          </div>
+          <div id="chart12" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <div class="story-text">
             <h4>Rail, Bus, and Ferry: The Commuter Split Across Capital Cities</h4>
             <p>Comparing mode shares across capital cities highlights how coastal hubs 
               <br>leverage heavy rail and ferry corridors, whereas smaller capitals rely 
@@ -205,6 +215,7 @@
         <li><strong>BITRE:</strong> <a href="https://www.bitre.gov.au/resource/infrastructure/australian-infrastructure-and-transport-statistics-yearbook-2025" target="_blank" rel="noopener noreferrer">Australian Infrastructure and Transport Statistics Yearbook 2025</a></li>
         <li><strong>ABS:</strong> <a href="https://www.abs.gov.au/articles/australias-journey-work#public-transport" target="_blank" rel="noopener noreferrer">Australia's Journey to Work — Public Transport Analysis</a></li>
         <li><strong>NSW Bus Performance:</strong> <a href="https://www.nsw.gov.au/departments-and-agencies/transport-for-nsw/bus-operators-nsw/bus-performance-reports" target="_blank" rel="noopener noreferrer">Transport for NSW Bus Operator Performance & On-Time Running Reports</a></li>
+        <li><strong>Data Vic Open Data:</strong> <a href="https://opendata.transport.vic.gov.au/dataset/public-transport-lines-and-stops" target="_blank" rel="noopener noreferrer">Public Transport Lines and Stops Data</a></li>
         <li><strong>Vic Gov:</strong> <a href="https://www.vic.gov.au/public-transport-daily-operational-performance-reports" target="_blank" rel="noopener noreferrer">Public Transport Daily Operational Performance Reports</a></li>
       </ul>
     </section>
@@ -227,7 +238,8 @@
       ["chart8", "clustered_barchart.vg.json"],
       ["chart9", "stacked_barchart.vg.json"],
       ["chart10", "2016_2021_clustered_barchart.vg.json"],
-      ["chart11", "line_chart.vg.json"]
+      ["chart11", "line_chart.vg.json"],
+      ["chart12", "dot_map.vg.json"]
     ];
 
     charts.forEach(([elementId, specPath]) => {
