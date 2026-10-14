@@ -1,0 +1,22 @@
+Capital city,Mode,Percentage,Total_Patronage_M
+Sydney,Heavy Rail,49.19,708.50
+Sydney,Light Rail,6.62,708.50
+Sydney,Bus,41.41,708.50
+Sydney,Ferry,2.78,708.50
+Melbourne,Heavy Rail,41.96,480.20
+Melbourne,Light Rail,33.36,480.20
+Melbourne,Bus,24.68,480.20
+Brisbane,Heavy Rail,34.26,161.70
+Brisbane,Bus,61.16,161.70
+Brisbane,Ferry,4.58,161.70
+Adelaide,Heavy Rail,21.01,69.50
+Adelaide,Light Rail,12.95,69.50
+Adelaide,Bus,66.04,69.50
+Perth,Heavy Rail,41.63,148.70
+Perth,Bus,57.77,148.70
+Perth,Ferry,0.61,148.70
+Hobart,Bus,96.30,6.75
+Hobart,Ferry,3.70,6.75
+Darwin,Bus,100.00,4.60
+Canberra,Light Rail,20.26,20.58
+Canberra,Bus,79.74,20.58
