@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "height": 300,
+  "width": 500,
+  "title": { "text": "Daily On-Time Performance Rate by Public Transport Mode in Victoria" },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/data/transport_mode_performance.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": { 
+      "field": "date", 
+      "type": "ordinal", 
+      "title": "Date",
+      "sort": "ascending",
+      "axis": {
+        "labelAngle": -45
+      } 
+    },
+    "y": { 
+      "field": "pct_ontime", 
+      "type": "quantitative", 
+      "title": "On-Time Performance (%)"
+    },
+    "color": { 
+      "field": "mode", 
+      "type": "nominal", 
+      "title": "Transport Mode",
+      "scale": {
+        "domain": ["Metropolitan train", "Metropolitan tram", "Regional train (V/Line)"],
+        "range": ["#d902a3", "#d5d902", "#5102d9"]
+      } 
+    },
+    "xOffset": { 
+      "field": "mode" 
+    }
+  }
+}
