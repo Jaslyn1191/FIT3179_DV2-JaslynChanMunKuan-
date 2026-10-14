@@ -18,8 +18,6 @@
   <header>
     <h1>Ride Relaxed, Travel Safely</h1>
     <h2>Urban Public Transport in Australia</h2>
-    <p>Discover how Australians commute, connect, and travel every day through 
-      <br>data visualisations.</p>
   </header>
 
   <main>
@@ -34,8 +32,7 @@
     <!-- CHAPTER 1 -->
     <section class="chapter">
       <div class="chapter-heading">
-        <h2>01. The Big Picture</h2>
-        <h3>How Australia Moves: A 20-Year Retrospective</h3>
+        <h2>01. The Big Picture: How Australia Moves (A 20-Year Retrospective)</h2>
         <p>Over two decades, urban population growth and policy shifts altered 
           <br>how Australians travel between cities and across states.</p> 
       </div>
@@ -53,11 +50,31 @@
 
         <article class="chart-card">
           <div class="story-text">
+            <h4>The Post-2020 Commuter Collapse: Journey to Work Shifts</h4>
+            <p>Comparing Australian Census Journey to Work data between 2016 and 
+              <br>2021 highlights a dramatic drop in public transit adoption across 
+              <br>all modes due to remote work trends.</p>
+          </div>
+          <div id="chart10" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <div class="story-text">
             <h4>Decade-by-Decade Passenger Growth</h4>
             <p>Comparing baseline volumes over 20 years highlights how public transit 
               <br>adoption evolved alongside infrastructure investment.</p>
           </div>
           <div id="chart2" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <div class="story-text">
+            <h4>State-by-State Commuter Trends (2001–2021)</h4>
+            <p>Tracking public transport passenger volumes across all Australian states and 
+              <br>territories highlights steady 15-year growth followed by sharp post-2020 drops 
+              <br>in major metropolitan states.</p>
+          </div>
+          <div id="chart11" class="chart"></div>
         </article>
 
         <article class="chart-card">
@@ -74,8 +91,7 @@
     <!-- CHAPTER 2 -->
     <section class="chapter">
       <div class="chapter-heading">
-        <h2>02. The Urban Pulse</h2>
-        <h3>City Networks in 2025: Who is Riding What?</h3>
+        <h2>02. The Urban Pulse: City Networks in 2025 - Who is Riding What?</h2>
         <p>Zooming into capital cities reveals how commuters return to or 
           <br>pivot away from transit post-2020, highlighting differences between Sydney, Melbourne, 
           <br>and regional hubs.</p>
@@ -90,29 +106,37 @@
           </div>
           <div id="chart6" class="chart"></div>
         </article>
+
+        <article class="chart-card">
+          <div class="story-text">
+            <h4>Rail, Bus, and Ferry: The Commuter Split Across Capital Cities</h4>
+            <p>Comparing mode shares across capital cities highlights how coastal hubs 
+              <br>leverage heavy rail and ferry corridors, whereas smaller capitals rely 
+              <br>predominantly on bus routes.</p>
+          </div>
+          <div id="chart9" class="chart"></div>
+        </article>
       </div>
     </section>
 
     <!-- CHAPTER 3 -->
     <section class="chapter">
       <div class="chapter-heading">
-        <h2>03. On The Ground</h2>
-        <h3>The Commuter Experience: Punctuality & Reliability</h3>
+        <h2>03. On The Ground: The Commuter Experience - Punctuality & Reliability</h2>
         <p>High patronage means little if the system breaks down. 
           <br>This chapter addresses whether services deliver on their operational promises.</p>
       </div>
 
       <div class="chart-story-wrapper">
-        <!-- Interactive Heatmap Card -->
         <article class="chart-card highlight-card">
           <div class="story-text">
             <h4>Sydney Metropolitan Bus Service Performance</h4>
             <p>While the overall network maintains an average on-time performance above 
               <br>93%, individual operator punctuality varies across regions and months.</p>
             <div class="interaction-tip">
-              <strong>How to interact:</strong> 
-              <br>Click and drag across the top line chart to brush-select a
-              <br>specific timeframe and filter operator results in the heatmap below.
+              <strong>How to interact:</strong>
+              <br>Click and drag across the top line chart to brush-select 
+              <br>a specific timeframe and filter operator results in the heatmap below.
             </div>
           </div>
           
@@ -120,17 +144,16 @@
 
           <div class="insight-box">
             <strong>Key Takeaway:</strong> 
-            <br>On-time performance spikes during major holiday periods (e.g., late December 
-            <br>to January) due to reduced traffic congestion, whereas suburban operators 
-            <br>face noticeable drops during peak school term months.
+            <br>On-time performance spikes during major holiday periods 
+            <br>(e.g., late December to January) due to reduced traffic congestion, 
+            <br>whereas suburban operators face noticeable drops during peak school term months.
           </div>
         </article>
 
         <article class="chart-card">
           <div class="story-text">
             <h4>Operator Mode Comparisons</h4>
-            <p>Evaluating operational efficiency across regional contract operators during peak commuter 
-              <br>periods.</p>
+            <p>Evaluating operational efficiency across regional contract operators during peak commuter periods.</p>
           </div>
           <div id="chart8" class="chart"></div>
         </article>
@@ -146,19 +169,50 @@
       </div>
     </section>
 
-    <!-- CONCLUSION -->
-    <section class="conclusion">
-      <h2>Summary</h2>
-      <p>Public transport shapes how people commute, connect with other cities, 
-        <br>and move through urban areas. While overall patronage continues to 
-        <br>rebuild, maintaining consistent reliability across suburban contractors remains essential for 
-        <br>sustained public trust.</p>
+    <!-- KEY TAKEAWAYS -->
+    <section class="takeaways-section">
+      <div class="takeaways-header">
+        <h2>Key Takeaways</h2>
+        <p>Three essential insights driving the future of transit.</p>
+      </div>
+
+      <div class="takeaway-grid">
+        <article class="takeaway-card">
+          <div class="takeaway-badge">01. Adoption</div>
+          <h3>Corridor Dominance</h3>
+          <p>Rail and suburban trunks remain the backbones of city travel.</p>
+        </article>
+
+        <article class="takeaway-card">
+          <div class="takeaway-badge">02. Reliability</div>
+          <h3>Traffic Sensitivity</h3>
+          <p>Surface bus networks exhibit high operational variability tied to congestion.</p>
+        </article>
+
+        <article class="takeaway-card">
+          <div class="takeaway-badge">03. Policy</div>
+          <h3>Sustaining Trust</h3>
+          <p>Post-2020 patronage recovery relies heavily on service predictability.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- DATA SOURCES SECTION -->
+    <section class="sources-section">
+      <h3>Data Sources & Reference</h3>
+      <p>Data compiled from official Australian transport portals:</p>
+      <ul class="sources-list">
+        <li><strong>BITRE:</strong> <a href="https://www.bitre.gov.au/resource/infrastructure/australian-infrastructure-and-transport-statistics-yearbook-2025" target="_blank" rel="noopener noreferrer">Australian Infrastructure and Transport Statistics Yearbook 2025</a></li>
+        <li><strong>ABS:</strong> <a href="https://www.abs.gov.au/articles/australias-journey-work#public-transport" target="_blank" rel="noopener noreferrer">Australia's Journey to Work — Public Transport Analysis</a></li>
+        <li><strong>NSW Bus Performance:</strong> <a href="https://www.nsw.gov.au/departments-and-agencies/transport-for-nsw/bus-operators-nsw/bus-performance-reports" target="_blank" rel="noopener noreferrer">Transport for NSW Bus Operator Performance & On-Time Running Reports</a></li>
+        <li><strong>Vic Gov:</strong> <a href="https://www.vic.gov.au/public-transport-daily-operational-performance-reports" target="_blank" rel="noopener noreferrer">Public Transport Daily Operational Performance Reports</a></li>
+      </ul>
     </section>
 
   </main>
 
   <footer>
-    Jaslyn Chan Mun Kuan (33804958) | FIT3179 Data Visualisation 2 | 12th October 2026
+    Jaslyn Chan Mun Kuan (33804958) | FIT3179 Data Visualisation 2 | 14th October 2026
   </footer>
 
   <script>
@@ -170,13 +224,34 @@
       ["chart5", "slope_graph.vg.json"],
       ["chart6", "symbol_map.vg.json"],
       ["chart7", "heatmap_dotplot.vg.json"],
-      ["chart8", "clustered_barchart.vg.json"]
+      ["chart8", "clustered_barchart.vg.json"],
+      ["chart9", "stacked_barchart.vg.json"],
+      ["chart10", "2016_2021_clustered_barchart.vg.json"],
+      ["chart11", "line_chart.vg.json"]
     ];
 
     charts.forEach(([elementId, specPath]) => {
       vegaEmbed("#" + elementId, specPath, {
         actions: false,
-        renderer: "svg"
+        renderer: "svg",
+        config: {
+          font: 'Times New Roman, Times, serif',
+          axis: {
+            labelFont: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+            titleFont: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+          },
+          legend: {
+            labelFont: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+            titleFont: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+          },
+          header: {
+            labelFont: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+            titleFont: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+          },
+          title: {
+            font: 'Times New Roman, Times, serif'
+          }
+        }
       }).catch(error => {
         console.error("Could not load " + specPath, error);
         document.getElementById(elementId).innerHTML =
