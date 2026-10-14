@@ -33,7 +33,10 @@
     "x": {
       "field": "Capital city",
       "type": "nominal",
-      "title": "Capital City"
+      "title": "Capital City",
+      "axis": {
+        "labelAngle": 0
+      }
     },
     "y": {
       "field": "Percentage",
