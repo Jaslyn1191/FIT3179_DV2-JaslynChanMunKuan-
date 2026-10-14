@@ -1,6 +1,10 @@
 [
-    {"transport":"Train", "2021 count":299053,"2016 count":770765},
-    {"transport":"Bus", "2021 count":212919, "2016 count":371842},
-    {"transport":"Tram/light rail", "2021 count":34275, "2016 count":65810},
-    {"transport":"Ferry", "2021 count":8470, "2016 count":17258}
+    {"transport":"Train", "year": 2021, "count":299053},
+    {"transport":"Train", "year": 2016, "count":770765},
+    {"transport":"Bus", "year": 2021, "count":212919},
+    {"transport":"Bus", "year": 2016, "count":371842},
+    {"transport":"Tram/light rail", "year": 2021, "count":34275},
+    {"transport":"Tram/light rail", "year": 2016, "count":65810},
+    {"transport":"Ferry", "year": 2021, "count":8470},
+    {"transport":"Ferry", "year": 2016, "count":17258}
 ]
