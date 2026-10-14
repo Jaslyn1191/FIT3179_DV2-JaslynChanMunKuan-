@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 600,
+  "height": 500,
+  "title": "Comparing Transport Mode Dependencies Across Australian Capitals",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/data/capital_city_mode_share.csv"
+  },
+  "transform": [
+    {
+      "fold": [
+        "Heavy rail share (%)",
+        "Light rail share (%)",
+        "Bus share (%)",
+        "Ferry share (%)"
+      ],
+      "as": ["Mode_Raw", "Percentage_Raw"]
+    },
+    {
+      "calculate": "toNumber(datum.Percentage_Raw)",
+      "as": "Percentage"
+    },
+    {
+      "calculate": "datum.Mode_Raw == 'Heavy rail share (%)' ? 'Heavy Rail' : datum.Mode_Raw == 'Light rail share (%)' ? 'Light Rail' : datum.Mode_Raw == 'Bus share (%)' ? 'Bus' : 'Ferry'",
+      "as": "Mode"
+    },
+    {
+      "filter": "datum.Percentage > 0"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Capital city",
+      "type": "nominal",
+      "title": "Capital City"
+    },
+    "y": {
+      "field": "Percentage",
+      "aggregate": "sum",
+      "type": "quantitative",
+      "title": "Mode Share (%)"
+    },
+    "color": {
+      "field": "Mode",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Heavy Rail", "Light Rail", "Bus", "Ferry"],
+        "range": ["#e7ba52", "#aec7e8", "#1f77b4", "#9467bd"]
+      },
+      "title": "Transport Mode"
+    }
+  }
+}
