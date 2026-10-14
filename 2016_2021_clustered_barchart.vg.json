@@ -2,37 +2,40 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "height": 300,
   "width": 500,
-  "title": { "text": "Daily On-Time Performance Rate by Public Transport Mode in Victoria" },
+  "title": "Journey to Work Mode Comparison (2016 vs 2021)",
   "data": {
-    "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/data/transport_mode_performance.csv"
+    "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/data/2016_2021_transport_mode.json"
   },
-  "mark": "bar",
+  "mark": {
+    "type": "bar",
+    "tooltip": true
+  },
   "encoding": {
     "x": { 
-      "field": "date", 
-      "type": "ordinal", 
-      "title": "Date",
-      "sort": "ascending",
+      "field": "transport",
+      "type": "nominal",
+      "title": "Mode of Transport",
       "axis": {
-        "labelAngle": -45
-      } 
+        "labelAngle": 0
+      }
     },
     "y": { 
-      "field": "pct_ontime", 
+      "field": "count",
       "type": "quantitative", 
-      "title": "On-Time Performance (%)"
+      "title": "Number of Commuters"
+    },
+    "xOffset": {
+      "field": "year",
+      "type": "nominal"
     },
     "color": { 
-      "field": "mode", 
-      "type": "nominal", 
-      "title": "Transport Mode",
+      "field": "year",
+      "type": "nominal",
+      "title": "Year",
       "scale": {
-        "domain": ["Metropolitan train", "Metropolitan tram", "Regional train (V/Line)"],
-        "range": ["#d902a3", "#d5d902", "#5102d9"]
-      } 
-    },
-    "xOffset": { 
-      "field": "mode" 
+        "domain": [2016, 2021],
+        "range": ["#3b82f6", "#0d9488"]
+      }
     }
   }
 }
