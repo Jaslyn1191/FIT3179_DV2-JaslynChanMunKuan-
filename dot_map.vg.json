@@ -41,6 +41,36 @@
         ],
         "name": "Map Centre: "
       }
+    },
+    {
+      "name": "mode_filter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All",
+          "Interstate Train",
+          "Metro Bus",
+          "Metro Train",
+          "Metro Tram",
+          "Regional Bus",
+          "Regional Coach",
+          "Regional Train",
+          "Skybus"
+        ],
+        "labels": [
+          "All",
+          "Interstate Train",
+          "Metro Bus",
+          "Metro Train",
+          "Metro Tram",
+          "Regional Bus",
+          "Regional Coach",
+          "Regional Train",
+          "Skybus"
+        ],
+        "name": "Transport Mode: "
+      }
     }
   ],
   "projection": {
@@ -107,6 +137,9 @@
         },
         {
           "filter": "datum.geometry.coordinates[0] >= 140.9 && datum.geometry.coordinates[0] <= 149.0 && datum.geometry.coordinates[1] >= -39.2 && datum.geometry.coordinates[1] <= -34.0"
+        },
+        {
+          "filter": "mode_filter === 'All' || lower(replace(datum.properties.MODE, '_', ' ')) === lower(replace(mode_filter, '_', ' '))"
         }
       ],
       "mark": {
@@ -131,6 +164,28 @@
           "field": "properties.MODE",
           "type": "nominal",
           "title": "Transport Mode",
+          "scale": {
+            "domain": [
+              "INTERSTATE TRAIN",
+              "METRO BUS",
+              "METRO TRAIN",
+              "METRO TRAM",
+              "REGIONAL BUS",
+              "REGIONAL COACH",
+              "REGIONAL TRAIN",
+              "SKYBUS"
+            ],
+            "range": [
+              "#e41a1c",
+              "#377eb8",
+              "#4daf4a",
+              "#984ea3",
+              "#ff7f00",
+              "#ffff33",
+              "#a65628",
+              "#f781bf"
+            ]
+          },
           "legend": {
             "orient": "bottom",
             "direction": "horizontal",
