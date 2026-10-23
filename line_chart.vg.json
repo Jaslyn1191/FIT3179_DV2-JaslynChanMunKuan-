@@ -5,30 +5,78 @@
   "title": "Public Transport Commuters by State (2001–2021)",
   "data": {
     "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/data/travel_to_work.csv"
-},
-  "mark": {
-    "type": "line",
-    "point": true,
-    "tooltip": true
   },
-  "encoding": {
-    "x": {
-        "field": "year",
-        "type": "ordinal",
-        "title": "Year",
-        "axis": {
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "tooltip": true
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {
             "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "number of employed persons",
+          "type": "quantitative",
+          "title": "Number of Employed Persons"
+        },
+        "color": {
+          "field": "state",
+          "type": "nominal",
+          "title": "State/Territory",
+          "scale": {
+            "range": [
+              "#0072B2",
+              "#E69F00",
+              "#56B4E9",
+              "#F0E442",
+              "#CC79A7",
+              "#000000",
+              "#332288",
+              "#882255"
+            ]
+          }
         }
+      }
     },
-    "y": {
-        "field": "number of employed persons", 
-        "type": "quantitative",
-        "title": "Number of Employed Persons"
-    },
-    "color": {
-        "field": "state", 
-        "type": "nominal",
-        "title": "State/Territory"
+    {
+      "transform": [
+        {
+          "filter": "datum.state == 'New South Wales' && datum.year == 2016"
+        }
+      ],
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "number of employed persons", "type": "quantitative"}
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "point",
+            "size": 120,
+            "color": "#d95f02",
+            "filled": true
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "text": "New South Wales: 397,173",
+            "dy": -14,
+            "dx": 0,
+            "fontWeight": "bold",
+            "fontSize": 12,
+            "color": "#1e293b"
+          }
+        }
+      ]
     }
-  }
+  ]
 }
