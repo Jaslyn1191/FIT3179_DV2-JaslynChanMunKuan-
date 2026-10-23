@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "width": 600,
   "height": 500,
   "title": "Public Transport Patronage by Australian Capital City, 2025",
   "projection": {
