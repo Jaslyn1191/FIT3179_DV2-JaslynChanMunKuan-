@@ -1,18 +1,98 @@
 [
-    {"state": "New South Wales","year":2016,"number of employed persons":397173},
-    {"state": "Victoria","year":2016,"number of employed persons":238249},
-    {"state": "Queensland","year":2016,"number of employed persons":110920},
-    {"state": "South Australia","year":2016,"number of employed persons":41548},
-    {"state": "Western Australia","year":2016,"number of employed persons":71026},
-    {"state": "Tasmania","year":2016,"number of employed persons":5362},
-    {"state": "Northern Territory","year":2016,"number of employed persons":4966},
-    {"state": "Australian Capital Territory","year":2016,"number of employed persons":12462},
-    {"state": "New South Wales","year":2021,"number of employed persons":147493},
-    {"state": "Victoria","year":2021,"number of employed persons":138871},
-    {"state": "Queensland","year":2021,"number of employed persons":100393},
-    {"state": "South Australia","year":2021,"number of employed persons":44458},
-    {"state": "Western Australia","year":2021,"number of employed persons":96782},
-    {"state": "Tasmania","year":2021,"number of employed persons":8052},
-    {"state": "Northern Territory","year":2021,"number of employed persons":2918},
-    {"state": "Australian Capital Territory","year":2021,"number of employed persons":15614}
+  {
+    "state": "New South Wales",
+    "year": 2016,
+    "number of employed persons": 397173,
+    "percentage": 45.05
+  },
+  {
+    "state": "Victoria",
+    "year": 2016,
+    "number of employed persons": 238249,
+    "percentage": 27.02
+  },
+  {
+    "state": "Queensland",
+    "year": 2016,
+    "number of employed persons": 110920,
+    "percentage": 12.58
+  },
+  {
+    "state": "South Australia",
+    "year": 2016,
+    "number of employed persons": 41548,
+    "percentage": 4.71
+  },
+  {
+    "state": "Western Australia",
+    "year": 2016,
+    "number of employed persons": 71026,
+    "percentage": 8.06
+  },
+  {
+    "state": "Tasmania",
+    "year": 2016,
+    "number of employed persons": 5362,
+    "percentage": 0.61
+  },
+  {
+    "state": "Northern Territory",
+    "year": 2016,
+    "number of employed persons": 4966,
+    "percentage": 0.56
+  },
+  {
+    "state": "Australian Capital Territory",
+    "year": 2016,
+    "number of employed persons": 12462,
+    "percentage": 1.41
+  },
+  {
+    "state": "New South Wales",
+    "year": 2021,
+    "number of employed persons": 147493,
+    "percentage": 26.60
+  },
+  {
+    "state": "Victoria",
+    "year": 2021,
+    "number of employed persons": 138871,
+    "percentage": 25.04
+  },
+  {
+    "state": "Queensland",
+    "year": 2021,
+    "number of employed persons": 100393,
+    "percentage": 18.10
+  },
+  {
+    "state": "South Australia",
+    "year": 2021,
+    "number of employed persons": 44458,
+    "percentage": 8.02
+  },
+  {
+    "state": "Western Australia",
+    "year": 2021,
+    "number of employed persons": 96782,
+    "percentage": 17.45
+  },
+  {
+    "state": "Tasmania",
+    "year": 2021,
+    "number of employed persons": 8052,
+    "percentage": 1.45
+  },
+  {
+    "state": "Northern Territory",
+    "year": 2021,
+    "number of employed persons": 2918,
+    "percentage": 0.53
+  },
+  {
+    "state": "Australian Capital Territory",
+    "year": 2021,
+    "number of employed persons": 15614,
+    "percentage": 2.82
+  }
 ]
