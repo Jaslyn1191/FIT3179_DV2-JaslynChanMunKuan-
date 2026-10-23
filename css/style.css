@@ -76,7 +76,7 @@ main {
   margin: 0;
 }
 
-/* CHAPTER SECTIONS (FLAT LAYOUT) */
+/* CHAPTER SECTIONS */
 .chapter {
   margin-bottom: 56px;
 }
@@ -110,40 +110,60 @@ main {
   font-size: 1.05rem;
 }
 
-/* CHART & STORYTELLING CONTAINER (FLAT LAYOUT) */
+/* CHART & STORYTELLING CONTAINER (2-COLUMN GRID) */
 .chart-story-wrapper {
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
 
+/* 2-Column Article Card: Left = Text (1fr), Right = Chart (1.2fr) */
 .chart-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Text on Left, Chart on Right */
+  gap: 32px;
+  align-items: start;
   padding: 0;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
+/* LEFT COLUMN: STORY & TEXT CONTENT */
 .story-text {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  padding-top: 4px;
 }
 
 .story-text h4 {
   font-family: 'Times New Roman', Times, serif;
-  margin: 0 0 8px 0;
-  font-size: 1.25rem;
+  margin: 0 0 12px 0;
+  font-size: 1.35rem;
   color: #0f172a;
+  line-height: 1.4;
 }
 
 .story-text p {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+  margin: 0 0 12px 0;
   color: #000000;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* RIGHT COLUMN: CHART CONTAINER */
+.chart-card .chart-wrapper {
+  width: 100%;
 }
 
 .chart-card .chart {
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .chart-card .chart:last-child {
@@ -152,8 +172,7 @@ main {
 
 /* CALLOUTS & INTERACTION TIPS */
 .interaction-tip {
-  width: fit-content;
-  max-width: 100%; /* Prevents text overflow on small screens */
+  width: 100%;
   margin-top: 12px;
   padding: 10px 14px;
   background-color: #f0fdf4;
@@ -163,18 +182,20 @@ main {
   color: #166534;
 }
 
+/* SPANS ACROSS BOTH GRID COLUMNS (FULL SINGLE-COLUMN ROW) */
 .insight-box {
-  width: fit-content;
-  max-width: 100%;
-  margin-top: 20px;
+  grid-column: 1 / -1;        /* Spans from column 1 to the end */
+  width: 100%;
+  margin-top: 16px;
   padding: 14px 18px;
   background-color: #f8fafc;
   border-left: 4px solid #0d9488;
   font-size: 0.95rem;
   color: #334155;
+  box-sizing: border-box;
 }
 
-/* KEY TAKEAWAYS SECTION (KEPT STYLED & CARDS PRESERVED) */
+/* KEY TAKEAWAYS SECTION */
 .takeaways-section {
   background: #0f172a;
   color: #ffffff;
@@ -308,13 +329,18 @@ footer {
 }
 
 /* RESPONSIVE LAYOUT */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   header {
     padding: 40px 16px;
   }
 
   main {
     padding: 28px 16px;
+  }
+
+  .chart-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .chapter-heading h2 {
