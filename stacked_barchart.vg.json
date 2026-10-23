@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "width": 600,
-  "height": 500,
+  "width": 500,
+  "height": 300,
   "title": "Comparing Transport Mode Dependencies Across Australian Capitals",
   "data": {
     "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/data/capital_city_mode_share.csv"
@@ -45,7 +45,10 @@
       "field": "Percentage",
       "aggregate": "sum",
       "type": "quantitative",
-      "title": "Mode Share (%)"
+      "title": "Mode Share (%)",
+      "scale": {
+        "domain": [0, 100]
+      }
     },
     "color": {
       "field": "Mode",
