@@ -4,7 +4,7 @@
     "text": "Public Transport Stops in Victoria",
     "subtitle": "Distribution of stops by transport mode"
   },
-  "width": 800,
+  "width": 700,
   "height": 500,
   "params": [
     {
