@@ -10,7 +10,7 @@
       "title": "Sydney Metropolitan Bus Service Average Monthly On-Time Performance (%)",
       "mark": "line",
       "height": 80,
-      "width": 600,
+      "width": 500,
       "params": [
         {
           "name": "brush",
@@ -47,7 +47,7 @@
     },
     {
       "mark": "rect",
-      "width": 600,
+      "width": 500,
       "height": 250,
       "transform": [
         {
