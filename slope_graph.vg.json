@@ -4,7 +4,7 @@
     "height": 300,
     "title": "Change in Public Transport Use by State/Territory, 2016–2021",
     "data": {
-        "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/slope_graph/data/2016_2021_travel_to_work.json"
+        "url": "https://raw.githubusercontent.com/Jaslyn1191/FIT3179_DV2-JaslynChanMunKuan-/refs/heads/main/data/2016_2021_travel_to_work.json"
     },
     "mark": {
         "type": "line",
@@ -22,10 +22,26 @@
             }
         }, 
         "y": {
-            "field": "number of employed persons",
+            "field": "percentage",
             "type": "quantitative",
-            "title": "Number of Employed Persons"
+            "title": "Percentage of Employed Persons"
         },
-        "color": {"field": "state", "type": "nominal", "title": "State/Territory"}
+        "color": {
+            "field": "state",
+            "type": "nominal",
+            "title": "State/Territory",
+            "scale": {
+                "range": [
+                "#0072B2", 
+                "#E69F00", 
+                "#56B4E9", 
+                "#F0E442",
+                "#CC79A7", 
+                "#000000", 
+                "#332288", 
+                "#882255"  
+                ]
+            }
+        }
     }
 }
