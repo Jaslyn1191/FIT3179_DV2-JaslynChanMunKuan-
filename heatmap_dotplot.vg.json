@@ -40,7 +40,7 @@
             "type": "quantitative",
             "aggregate": "mean",
             "format": ".2f",
-            "title": "Avg On-Time %"
+            "title": "Average On-Time %"
           }
         ]
       }
